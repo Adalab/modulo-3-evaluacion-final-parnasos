@@ -4,7 +4,7 @@ import "../stylesheets/FilterN.scss";
 const FilterN = (props) => {
   return (
     <>
-      <label className="form__label" htmlfor="name">
+      <label className="form__label" htmlFor="name">
         Filtrar por nombre
       </label>
       <input className="form__input" type="text" name="name" id="name" />
