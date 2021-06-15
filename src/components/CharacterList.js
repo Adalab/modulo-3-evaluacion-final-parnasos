@@ -1,5 +1,6 @@
 import React from "react";
 import Character from "./Character";
+import "../stylesheets/CharacterList.scss";
 
 const CharacterList = (props) => {
   const userElements = props.users.map((user) => {
@@ -7,7 +8,7 @@ const CharacterList = (props) => {
   });
   return (
     <section>
-      <ul className="cards">{userElements}</ul>
+      <ul className="character__list">{userElements}</ul>
     </section>
   );
 };
