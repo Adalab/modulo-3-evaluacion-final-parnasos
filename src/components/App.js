@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link, Route, Switch } from "react-router-dom";
-import GetApiData from "./services/GetApiData";
-import ls from "./services/local-storage";
-import CharacterList from "./components/CharacterList";
-import Filter from "./components/Filter";
+import GetApiData from "../services/GetApiData";
+import ls from "../services/local-storage";
+import CharacterList from "./CharacterList";
+import Filter from "./Filter";
+import "../stylesheets/App.scss";
 
 const App = () => {
   const usersLocalStorage = ls.get("users", []); //el segundo parámetro corresponde a defaultData
@@ -25,7 +26,11 @@ const App = () => {
   return (
     <>
       <div className="App">
-        <h1 className="title">Rick and Morty</h1>
+        <img
+          className="logo"
+          src="https://help.redbubble.com/hc/article_attachments/360002309526/Rick_and_Morty_-_logo__English_.png"
+        ></img>
+
         <Filter />
         <CharacterList users={users} />
       </div>
