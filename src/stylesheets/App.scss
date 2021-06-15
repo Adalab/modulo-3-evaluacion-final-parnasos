@@ -1,11 +1,17 @@
 //@import url("https://fonts.googleapis.com/css2?family=Dokdo&display=swap");
-@import "./Font.scss";
+//@import "./Font.scss";
+
+@font-face {
+  font-family: "RickandMortyFont";
+  src: local("get_schwifty.ttf"), url("../fonts/RM.ttf") format("truetype");
+}
 
 .App {
   text-align: center;
   background-color: #282c34;
   color: aliceblue;
   font-family: "RickandMortyFont";
+  letter-spacing: 2px;
 }
 
 .logo {

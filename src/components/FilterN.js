@@ -5,7 +5,7 @@ const FilterN = (props) => {
   return (
     <>
       <label className="form__label" htmlFor="name">
-        Filtrar por nombre
+        Filter by name:
       </label>
       <input className="form__input" type="text" name="name" id="name" />
     </>
