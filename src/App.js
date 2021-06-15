@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link, Route, Switch } from "react-router-dom";
-
 import GetApiData from "./services/GetApiData";
 import ls from "./services/local-storage";
+import CharacterList from "./components/CharacterList";
+import Filter from "./components/Filter";
 
 const App = () => {
   const usersLocalStorage = ls.get("users", []); //el segundo parámetro corresponde a defaultData
@@ -26,7 +27,7 @@ const App = () => {
       <div className="App">
         <h1 className="title">Rick and Morty</h1>
         <Filter />
-        <UserList users={users} />
+        <CharacterList users={users} />
       </div>
     </>
   );

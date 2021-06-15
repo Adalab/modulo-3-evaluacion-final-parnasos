@@ -1,7 +1,6 @@
 //import React from "react";
 
-const urlFetch =
-  "https://rickandmortyapi.com/documentation/#get-all-characters";
+const urlFetch = "https://rickandmortyapi.com/api/character";
 
 const GetApiData = () => {
   return fetch(urlFetch)

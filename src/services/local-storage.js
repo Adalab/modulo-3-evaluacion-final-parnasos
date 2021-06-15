@@ -1,7 +1,7 @@
 //import React from "react";
 
 const get = (key, defaultData) => {
-  localStorage.getItem(key);
+  const data = localStorage.getItem(key);
   if (data === null) {
     return defaultData;
   } else {

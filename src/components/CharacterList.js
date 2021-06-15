@@ -1,10 +1,9 @@
-import userEvent from "@testing-library/user-event";
 import React from "react";
-import User from "./User";
+import Character from "./Character";
 
-const UserList = (props) => {
+const CharacterList = (props) => {
   const userElements = props.users.map((user) => {
-    return <User key={user.id} user={user} />;
+    return <Character key={user.id} user={user} />;
   });
   return (
     <section>
@@ -12,3 +11,5 @@ const UserList = (props) => {
     </section>
   );
 };
+
+export default CharacterList;
