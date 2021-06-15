@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Dokdo&display=swap");
+//@import url("https://fonts.googleapis.com/css2?family=Dokdo&display=swap");
+@import "./Font.scss";
+
 .App {
   text-align: center;
   background-color: #282c34;
   color: aliceblue;
-  font-family: "Dokdo", cursive;
+  font-family: "RickandMortyFont";
 }
 
 .logo {
