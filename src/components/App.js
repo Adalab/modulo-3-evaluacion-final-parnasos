@@ -72,7 +72,7 @@ const App = () => {
       return (
         <>
           <div className="unfinded__container">
-            <p className="unfinded__text"> Unfinded character, sorry!</p>
+            <p className="unfinded__text"> Damn! Character not found, sorry.</p>
             <Link className="unfinded__homepage" to="/">
               Go back to the Homepage
             </Link>

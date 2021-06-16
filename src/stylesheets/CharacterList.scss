@@ -7,8 +7,12 @@
   list-style: none;
   padding-bottom: 60px;
 }
-.warning {
+.warning__text {
   font-size: 40px;
   padding-top: 60px;
   text-transform: uppercase;
+}
+
+.warning__container {
+  height: 51.4vh;
 }
