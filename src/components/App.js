@@ -65,10 +65,12 @@ const App = () => {
     } else {
       return (
         <>
-          <p> Unfinded character, sorry!</p>
-          <Link className="backToHomepage" to="/">
-            Go back to the Homepage
-          </Link>
+          <div className="unfinded__container">
+            <p className="unfinded__text"> Unfinded character, sorry!</p>
+            <Link className="unfinded__homepage" to="/">
+              Go back to the Homepage
+            </Link>
+          </div>
         </>
       );
     }
@@ -87,7 +89,11 @@ const App = () => {
             <Filter handleFilter={handleFilter} filterName={filterName} />
             <CharacterList users={filteredUsers} />
           </Route>
-          <Route path="/character/:userId" render={renderCharacterDetail} />
+          <Route
+            exact
+            path="/character/:userId"
+            render={renderCharacterDetail}
+          />
         </Switch>
       </div>
     </>
