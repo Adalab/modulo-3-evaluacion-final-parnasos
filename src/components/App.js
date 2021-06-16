@@ -14,7 +14,9 @@ const App = () => {
   const usersLocalStorage = ls.get("users", []); //el segundo parámetro corresponde a defaultData
   const [users, setUsers] = useState(usersLocalStorage);
   const [filterName, setFilterName] = useState(ls.get("filterName", "")); //string vacío hace que nos muestre todos los personajes.
-
+  const [filterSpecies, setFilterSpecies] = useState(
+    ls.get("filterSpecies", "")
+  );
   useEffect(() => {
     if (users.length === 0) {
       GetApiData().then((userData) => {
@@ -31,28 +33,32 @@ const App = () => {
     ls.set("filterName", filterName);
   }, [filterName]);
 
+  useEffect(() => {
+    ls.set("filterSpecies", filterSpecies);
+  }, [filterSpecies]);
+
   const handleFilter = (data) => {
     console.log(data);
     if (data.key === "name") {
       console.log(data.value);
       setFilterName(data.value);
+    } else if (data.key === "species") {
+      console.log(data.value);
+      setFilterSpecies(data.value);
     }
   };
   // render
-  const filteredUsers = users.filter((user) => {
-    return user.name.toLowerCase().includes(filterName.toLowerCase());
-  });
-  // .filter(user => {
-  //   if (filterGender === '') {
-  //     return true;
-  //   } else {
-  //     return user.gender === filterGender;
-  //   }
-  //   // return filterGender === '' ? true : user.gender === filterGender
-  //});
+  const filteredUsers = users
+    .filter((user) => {
+      return user.name.toLowerCase().includes(filterName.toLowerCase());
+    })
+    .filter((user) => {
+      return filterSpecies === "" ? true : user.species === filterSpecies;
+    });
 
   //console.log(filteredUsers);
   //console.log("State filterName:", filterName);
+  console.log("State filterSpecies:", filterSpecies);
 
   const renderCharacterDetail = (props) => {
     const routeChId = parseInt(props.match.params.userId);
@@ -86,7 +92,11 @@ const App = () => {
 
         <Switch>
           <Route exact path="/">
-            <Filter handleFilter={handleFilter} filterName={filterName} />
+            <Filter
+              handleFilter={handleFilter}
+              filterName={filterName}
+              filterSpecies={filterSpecies}
+            />
             <CharacterList users={filteredUsers} />
           </Route>
           <Route
