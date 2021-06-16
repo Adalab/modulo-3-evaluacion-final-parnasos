@@ -13,6 +13,8 @@ const GetApiData = () => {
           image: user.image,
           species: user.species,
           status: user.status,
+          origin: user.origin.name,
+          episodes: user.episodes.lenght,
         };
       });
       return CleanData;
