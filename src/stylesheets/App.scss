@@ -5,18 +5,26 @@
   font-family: "RickandMortyFont";
   src: local("get_schwifty.ttf"), url("../fonts/RM.ttf") format("truetype");
 }
-
+// #root {
+//   background-color: #282c34;
+//   height: 100%;
+// }
 .App {
   text-align: center;
   background-color: #282c34;
   color: aliceblue;
   font-family: "RickandMortyFont";
-  letter-spacing: 2px;
-  height: 100vh;
-  padding-bottom: 40px;
+  letter-spacing: 3px;
+  height: 100%;
 }
 
 .logo {
   width: 450px;
   padding: 40px 10px;
+}
+
+.backToHomepage {
+  display: block;
+  color: #a8cb50;
+  margin: auto;
 }

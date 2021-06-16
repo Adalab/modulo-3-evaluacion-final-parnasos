@@ -1,5 +1,6 @@
 import React from "react";
 import Character from "./Character";
+import { Link } from "react-router-dom";
 
 import "../stylesheets/CharacterList.scss";
 
@@ -12,7 +13,11 @@ const CharacterList = (props) => {
     );
   });
   if (props.users.length === 0) {
-    return <p className="warning"> Unfinded character, sorry!</p>;
+    return (
+      <>
+        <p className="warning"> Unfinded character, sorry!</p>{" "}
+      </>
+    );
   } else {
     return (
       <section>

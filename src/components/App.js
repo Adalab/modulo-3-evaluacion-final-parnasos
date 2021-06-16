@@ -66,7 +66,9 @@ const App = () => {
       return (
         <>
           <p> Unfinded character, sorry!</p>
-          <Link to="/">Go back to the Homepage</Link>
+          <Link className="backToHomepage" to="/">
+            Go back to the Homepage
+          </Link>
         </>
       );
     }
