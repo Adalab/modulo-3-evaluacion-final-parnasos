@@ -3,7 +3,7 @@ import "../stylesheets/FilterN.scss";
 
 const FilterN = (props) => {
   const handleChange = (ev) => {
-    ev.preventDefault();
+    //ev.preventDefault();
     props.handleFilter({
       value: ev.target.value,
       key: "name",

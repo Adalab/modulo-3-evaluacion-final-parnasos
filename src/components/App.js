@@ -29,11 +29,15 @@ const App = () => {
   const handleFilter = (data) => {
     console.log(data);
     if (data.key === "name") {
+      console.log(data.value);
       setFilterName(data.value);
     }
   };
   // render
   const filteredUsers = users;
+
+  console.log(filteredUsers);
+  console.log("State filterName:", filterName);
 
   return (
     <>
