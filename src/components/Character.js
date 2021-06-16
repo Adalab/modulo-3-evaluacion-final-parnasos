@@ -3,18 +3,8 @@ import "../stylesheets/Character.scss";
 import { Link, Route, Switch } from "react-router-dom";
 
 const Character = (props) => {
-  // const getGender = () => {
-  //   if (props.user.gender === "female") {
-  //     return "Mujer";
-  //   } else if (props.user.gender === "male") {
-  //     return "Hombre";
-  //   } else {
-  //     return "No binario";
-  //   }
-  // };
-
   return (
-    <Link to={`/Character/${props.user.id}`}>
+    <Link to={`/character/${props.user.id}`}>
       <article className="character__card">
         <img
           className="card__img"

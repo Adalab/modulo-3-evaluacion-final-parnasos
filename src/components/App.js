@@ -61,9 +61,14 @@ const App = () => {
     });
     console.log("Router props", props.match.params.userId);
     if (foundCharacter !== undefined) {
-      <CharacterDetails user={foundCharacter} />;
+      return <CharacterDetails user={foundCharacter} />;
     } else {
-      return <p> Unfinded character, sorry!</p>;
+      return (
+        <>
+          <p> Unfinded character, sorry!</p>
+          <Link to="/">Go back to the Homepage</Link>
+        </>
+      );
     }
   };
   return (
@@ -74,10 +79,11 @@ const App = () => {
           src="https://help.redbubble.com/hc/article_attachments/360002309526/Rick_and_Morty_-_logo__English_.png"
           alt="Logo Rick and Morty"
         ></img>
+
         <Switch>
           <Route exact path="/">
-            <Filter handleFilter={handleFilter} />
-            <CharacterList users={filteredUsers} filterName={filterName} />
+            <Filter handleFilter={handleFilter} filterName={filterName} />
+            <CharacterList users={filteredUsers} />
           </Route>
           <Route path="/character/:userId" render={renderCharacterDetail} />
         </Switch>
