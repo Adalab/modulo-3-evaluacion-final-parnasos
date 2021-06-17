@@ -1,11 +1,13 @@
 .character__list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
   grid-auto-rows: min-content;
   grid-gap: 30px 20px;
-  margin: 20px 40px 0 40px;
+  margin-top: 20px;
   list-style: none;
-  padding-bottom: 60px;
+  padding: 0 40px 60px 40px;
 }
 .warning__text {
   font-size: 40px;
