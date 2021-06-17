@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "../stylesheets/characterDetail.scss";
+import PropTypes from "prop-types";
 
 const CharacterDetails = (props) => {
   const makeDead = () => {
@@ -46,4 +47,14 @@ const CharacterDetails = (props) => {
   );
 };
 
+CharacterDetails.propTypes = {
+  user: PropTypes.shape({
+    name: PropTypes.string,
+    image: PropTypes.string,
+    id: PropTypes.number,
+    episodes: PropTypes.number,
+    species: PropTypes.array,
+    status: PropTypes.array,
+  }),
+};
 export default CharacterDetails;

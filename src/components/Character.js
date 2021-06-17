@@ -1,6 +1,7 @@
 import React from "react";
 import "../stylesheets/Character.scss";
-import { Link, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const Character = (props) => {
   return (
@@ -23,5 +24,13 @@ const Character = (props) => {
     </Link>
   );
 };
-
+Character.propTypes = {
+  user: PropTypes.shape({
+    name: PropTypes.string,
+    image: PropTypes.string,
+    id: PropTypes.number,
+    species: PropTypes.array,
+    status: PropTypes.array,
+  }),
+};
 export default Character;
