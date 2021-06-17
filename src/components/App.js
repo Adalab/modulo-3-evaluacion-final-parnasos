@@ -8,7 +8,7 @@ import CharacterList from "./CharacterList";
 import Filter from "./Filter";
 import CharacterDetails from "./CharacterDetails";
 //style
-import "../stylesheets/App.scss";
+import "../stylesheets/layout/App.scss";
 
 const App = () => {
   const usersLocalStorage = ls.get("users", []); //el segundo parámetro corresponde a defaultData

@@ -1,21 +1,15 @@
-//@import url("https://fonts.googleapis.com/css2?family=Dokdo&display=swap");
-//@import "./Font.scss";
+@import "./CharacterList.scss";
+@import "./CharacterDetail.scss";
+@import "./Character.scss";
+@import "./FilterN.scss";
+@import "../components/Font.scss";
 
-@font-face {
-  font-family: "RickandMortyFont";
-  src: local("get_schwifty.ttf"), url("../fonts/RM.ttf") format("truetype");
-}
-// #root {
-//   background-color: #282c34;
-//   height: 100%;
-// }
 .App {
   text-align: center;
   background-color: #282c34;
   color: aliceblue;
   font-family: "RickandMortyFont";
   letter-spacing: 3px;
-  //height: 100%;
 }
 
 .logo {
@@ -41,4 +35,8 @@
   display: block;
   color: #a8cb50;
   margin: auto;
+}
+
+a {
+  text-decoration: none;
 }

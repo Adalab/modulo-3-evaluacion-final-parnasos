@@ -1,5 +1,4 @@
 import React from "react";
-import "../stylesheets/FilterN.scss";
 
 const FilterName = (props) => {
   const handleChange = (ev) => {

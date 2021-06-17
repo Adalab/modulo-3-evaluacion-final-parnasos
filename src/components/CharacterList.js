@@ -1,8 +1,6 @@
 import React from "react";
 import Character from "./Character";
 
-import "../stylesheets/CharacterList.scss";
-
 const CharacterList = (props) => {
   const nameList = props.users;
   const orderList = nameList.sort((a, b) =>
