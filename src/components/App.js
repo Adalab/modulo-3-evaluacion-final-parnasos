@@ -17,6 +17,9 @@ const App = () => {
   const [filterSpecies, setFilterSpecies] = useState(
     ls.get("filterSpecies", "")
   );
+
+  //UseEffect
+
   useEffect(() => {
     if (users.length === 0) {
       GetApiData().then((userData) => {
@@ -37,16 +40,16 @@ const App = () => {
     ls.set("filterSpecies", filterSpecies);
   }, [filterSpecies]);
 
+  //Handle Function
+
   const handleFilter = (data) => {
-    console.log(data);
     if (data.key === "name") {
-      console.log(data.value);
       setFilterName(data.value);
     } else if (data.key === "species") {
-      console.log(data.value);
       setFilterSpecies(data.value);
     }
   };
+
   // render
   const filteredUsers = users
     .filter((user) => {
@@ -56,16 +59,12 @@ const App = () => {
       return filterSpecies === "" ? true : user.species === filterSpecies;
     });
 
-  //console.log(filteredUsers);
-  //console.log("State filterName:", filterName);
-  console.log("State filterSpecies:", filterSpecies);
-
   const renderCharacterDetail = (props) => {
     const routeChId = parseInt(props.match.params.userId);
     const foundCharacter = users.find((user) => {
       return user.id === routeChId;
     });
-    console.log("Router props", props.match.params.userId);
+
     if (foundCharacter !== undefined) {
       return <CharacterDetails user={foundCharacter} />;
     } else {

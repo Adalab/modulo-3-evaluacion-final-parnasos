@@ -1,7 +1,7 @@
 import React from "react";
 import "../stylesheets/FilterN.scss";
 
-const FilterN = (props) => {
+const FilterName = (props) => {
   const handleChange = (ev) => {
     ev.preventDefault();
     props.handleFilter({
@@ -25,4 +25,4 @@ const FilterN = (props) => {
     </>
   );
 };
-export default FilterN;
+export default FilterName;

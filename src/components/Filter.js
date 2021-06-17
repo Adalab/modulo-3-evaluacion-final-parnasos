@@ -1,12 +1,12 @@
 import React from "react";
-import FilterN from "./FilterN";
+import FilterName from "./FilterName";
 import FilterSpecies from "./FilterSpecies";
 
 const Filter = (props) => {
   return (
     <section>
       <form>
-        <FilterN
+        <FilterName
           handleFilter={props.handleFilter}
           filterName={props.filterName}
         />

@@ -53,8 +53,8 @@ CharacterDetails.propTypes = {
     image: PropTypes.string,
     id: PropTypes.number,
     episodes: PropTypes.number,
-    species: PropTypes.array,
-    status: PropTypes.array,
+    species: PropTypes.string,
+    status: PropTypes.string,
   }),
 };
 export default CharacterDetails;
