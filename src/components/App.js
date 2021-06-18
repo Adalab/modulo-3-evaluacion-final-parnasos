@@ -84,11 +84,13 @@ const App = () => {
     <>
       <div className="App">
         <div className="logo__container">
-          <img
-            className="logo"
-            src="https://help.redbubble.com/hc/article_attachments/360002309526/Rick_and_Morty_-_logo__English_.png"
-            alt="Logo Rick and Morty"
-          ></img>
+          <Link className="unfinded__homepage" to="/">
+            <img
+              className="logo"
+              src="https://help.redbubble.com/hc/article_attachments/360002309526/Rick_and_Morty_-_logo__English_.png"
+              alt="Logo Rick and Morty"
+            ></img>
+          </Link>
         </div>
 
         <Switch>

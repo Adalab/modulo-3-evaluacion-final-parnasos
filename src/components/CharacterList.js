@@ -3,9 +3,7 @@ import Character from "./Character";
 
 const CharacterList = (props) => {
   const nameList = props.users;
-  const orderList = nameList.sort((a, b) =>
-    a.name > b.name ? 1 : a.name < b.name ? -1 : 0
-  );
+  nameList.sort((a, b) => (a.name > b.name ? 1 : a.name < b.name ? -1 : 0));
 
   const userElements = props.users.map((user) => {
     return (
