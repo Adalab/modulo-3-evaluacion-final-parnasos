@@ -4,7 +4,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import PropTypes from "prop-types";
 
 const CharacterDetails = (props) => {
-  const makeDead = () => {
+  const setIcon = () => {
     if (props.user.status === "Dead") {
       return "fas fa-dizzy";
     } else if (props.user.status === "Alive") {
@@ -31,7 +31,7 @@ const CharacterDetails = (props) => {
             </li>
             <li className="card__details--item ">
               Status: {props.user.status}
-              <i class={`${makeDead()}`}></i>
+              <i class={`${setIcon()}`}></i>
             </li>
             <li className="card__details--item">Origin: {props.user.origin}</li>
             <li className="card__details--item">

@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
@@ -29,8 +28,8 @@ Character.propTypes = {
     name: PropTypes.string,
     image: PropTypes.string,
     id: PropTypes.number,
-    species: PropTypes.array,
-    status: PropTypes.array,
+    species: PropTypes.string,
+    status: PropTypes.string,
   }),
 };
 export default Character;
