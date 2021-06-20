@@ -17,6 +17,7 @@ const App = () => {
   const [filterSpecies, setFilterSpecies] = useState(
     ls.get("filterSpecies", "")
   );
+  const [filterStatus, setFilterStatus] = useState(ls.get("filterStatus", ""));
 
   //UseEffect
 
@@ -40,6 +41,10 @@ const App = () => {
     ls.set("filterSpecies", filterSpecies);
   }, [filterSpecies]);
 
+  useEffect(() => {
+    ls.set("filterStatus", filterStatus);
+  }, [filterStatus]);
+
   //Handle Function
 
   const handleFilter = (data) => {
@@ -47,6 +52,8 @@ const App = () => {
       setFilterName(data.value);
     } else if (data.key === "species") {
       setFilterSpecies(data.value);
+    } else if (data.key === "status") {
+      setFilterStatus(data.value);
     }
   };
 
@@ -57,6 +64,9 @@ const App = () => {
     })
     .filter((user) => {
       return filterSpecies === "" ? true : user.species === filterSpecies;
+    })
+    .filter((user) => {
+      return filterStatus === "" ? true : user.status === filterStatus;
     });
 
   const renderCharacterDetail = (props) => {

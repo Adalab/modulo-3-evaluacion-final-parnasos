@@ -1,6 +1,7 @@
 import React from "react";
 import FilterName from "./FilterName";
 import FilterSpecies from "./FilterSpecies";
+import FilterStatus from "./FilterStatus";
 
 const Filter = (props) => {
   return (
@@ -13,6 +14,10 @@ const Filter = (props) => {
         <FilterSpecies
           handleFilter={props.handleFilter}
           filterSpecies={props.filterSpecies}
+        />
+        <FilterStatus
+          handleFilter={props.handleFilter}
+          filterStatus={props.filterStatus}
         />
       </form>
     </section>
